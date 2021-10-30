@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_30_164059) do
+ActiveRecord::Schema.define(version: 2021_10_30_164717) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,9 +27,38 @@ ActiveRecord::Schema.define(version: 2021_10_30_164059) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "instruments", force: :cascade do |t|
+    t.decimal "price"
+    t.integer "year"
+    t.string "color"
+    t.string "material"
+    t.string "hole"
+    t.string "neck"
+    t.string "bridge"
+    t.string "body"
+    t.string "back"
+    t.integer "frets"
+    t.text "description"
+    t.integer "user_id"
+    t.integer "category_id"
+    t.integer "maker_id"
+    t.integer "family_id"
+    t.boolean "for_sale", default: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "makers", force: :cascade do |t|
     t.text "comment"
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

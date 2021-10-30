@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :instruments
+  resources :users
   resources :makers
   resources :categories
   resources :families
