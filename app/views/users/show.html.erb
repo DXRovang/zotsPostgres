@@ -1,0 +1,27 @@
+<div class="title show"><h1><%= @user.username %>'s Page</h1>
+<%= @user.email %><br><br></div>
+<% if @user.id == session[:user_id] %>
+<button style="text_decoration: none;"><%= link_to "Edit My Info", edit_user_path(@user) %></button>
+<%= button_to "Delete My Account", user_path(@user), method: :delete, data: { confirm: "Are You Sure?" } %>
+
+<% end %>
+<h3>Available Instruments</h3>
+
+<ul>
+  <% @user.instruments.order(:category_id).each do |instrument| %>
+    <% if instrument.for_sale == true %>
+      <li><%= link_to instrument.category.name, instrument_path(instrument) %>(<%= instrument.year %>) - 
+      <%= instrument.maker.name %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<h3>Currently Unavailable</h3>
+<ul>
+  <% @user.instruments.order(:category_id).each do |instrument| %>
+    <% if instrument.for_sale == false %>
+      <li><%= link_to instrument.category.name, instrument_path(instrument) %>(<%= instrument.year %>) - 
+      <%= instrument.maker.name %></li>
+    <% end %>
+  <% end %>
+</ul>

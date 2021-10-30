@@ -1,0 +1,10 @@
+<h1>Sign Up</h1>
+
+<%= form_for @user do |form| %> 
+ 
+<%= render partial: "users", locals: { form: form, user: @user  } %>
+
+<div><%= form.submit "Sign Up"%></div>
+<% end %>
+
+<%= link_to "Sign Up With Facebook", '/auth/facebook' %>

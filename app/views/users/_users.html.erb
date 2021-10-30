@@ -1,0 +1,26 @@
+<% if @user.errors.any? %>
+<div id="error_explanation">
+  <h2>Oops!  We noticed  
+    <%= pluralize(@user.errors.count, "error") %>
+    when trying to process your information.
+  </h2>
+  
+  <ul>
+  <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+</div> 
+<% end %>
+
+<div><%= form.label "Username" %></div>
+<%= form.text_field :username %>
+
+<div><%= form.label "Email" %></div>
+<%= form.text_field :email %>
+
+<div><%= form.label "Password" %></div>
+<%= form.password_field :password %>
+
+<div><%= form.label "Password Confirmation" %></div>
+<%= form.password_field :password_confirmation %><br><br>

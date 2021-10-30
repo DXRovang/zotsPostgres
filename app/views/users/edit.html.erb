@@ -1,0 +1,8 @@
+<h1>Edit</h1>
+
+<%= form_for @user do |form| %> 
+ 
+<%= render partial: "users", locals: { form: form, user: @user  } %>
+
+<div><%= form.submit "Update"%></div>
+<% end %>
