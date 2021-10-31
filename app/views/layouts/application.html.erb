@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ZotsPostgres</title>
+    <title>ZOldTimeStrings</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="/styles2.css"> 
   </head>
-
   <body>
-    <%= yield %>
+    <% if current_user %>
+    <div class="nav">
+    <ul>
+      <li><button><%= link_to "Home", families_path %></button></li>
+      <li><button><%= link_to "Makers", makers_path %></button></li>
+      <li><button><%= link_to "My Instruments", user_path(session[:user_id]) %></button></li>
+      <li><button><%= link_to "Everything", instruments_path %></button></li>
+      <li><%= button_to "Logout", logout_path, method: :post %></li>
+    </ul>
+    </div>
+      <br>
+    <% end %>
+
+    <%= yield %><br>
+    
   </body>
 </html>
