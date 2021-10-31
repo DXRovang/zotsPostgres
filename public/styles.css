@@ -1,6 +1,22 @@
 body{
   background-color: rgba(255, 174, 0, 0.742);
 }
-  .title{
-    text-align: center;
-  }
+
+.title{
+  text-align: center;
+}
+
+.home-card{
+  background-color: antiquewhite;
+}
+
+.text a:link{
+  text-decoration: none;
+}
+
+.navbar{
+  border-radius: 2px;
+  border-style: solid;
+  border-color: black;
+  
+}
