@@ -1,0 +1,19 @@
+<div class="show title">
+<h1>
+Add a 
+<% if @family.id == 1 %>
+Banjo
+<% elsif @family.id == 2 %>
+Guitar
+<% elsif @family.id == 3 %>
+Mandolin
+<% end %>
+to the Database
+</h1></div>
+
+<%= form_for @instrument do |form| %>
+
+<%= render partial: "instruments", locals: { form: form, family: @family, instrument: @instrument } %>
+
+<div><%= form.submit "Add Instrument"%></div> 
+<% end %>

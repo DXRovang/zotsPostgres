@@ -1,0 +1,61 @@
+ <% if instrument.errors.any? %>
+  <div id="error_explanation">
+    <h2>Oops!  We noticed  
+      <%= pluralize(instrument.errors.count, "error") %>
+      when trying to process your information.
+    </h2>
+    <ul>
+    <% instrument.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div><%= form.label "Type"%></div>
+<% if family.id == 1 %>
+  <%= form.collection_select :category_id, banjo_categories, :id, :name %>
+  <%= form.hidden_field :family_id, :value => 1 %>
+<% elsif family.id == 2 %>
+  <%= form.collection_select :category_id, guitar_categories, :id, :name %>
+  <%= form.hidden_field :family_id, :value => 2 %>
+<% elsif family.id == 3 %>
+  <%= form.collection_select :category_id, mandolin_categories, :id, :name %>
+  <%= form.hidden_field :family_id, :value => 3 %>
+<% end %>
+
+<div><%= form.label "Maker" %></div>
+<%= form.text_field :maker_name, list: "makers_autocomplete" %>
+<datalist id="makers_autocomplete">
+<% Maker.all.each do |maker| %>
+<option value="<%= maker.name %>">
+<% end %>
+</datalist> 
+
+<div><%= form.label "Price"%></div>  
+<%= form.number_field :price%>
+<div><%= form.label "Year"%></div>
+<%= form.number_field :year%>
+<div><%= form.label "Color"%></div>
+<%= form.text_field :color%>
+<div><%= form.label "Material"%></div>
+<%= form.text_field :material%>
+<div><%= form.label "Frets"%></div>
+<%= form.number_field :frets%>
+
+<% if family.id == 1 %>
+  <div><%= form.label "Back"%></div>
+  <%= form.text_field :back%>
+<% elsif family.id == 2 %>
+  <div><%= form.label "Bridge"%></div>
+  <%= form.text_field :bridge%>
+  <div><%= form.label "Neck"%></div>
+  <%= form.text_field :neck%>
+<% elsif family.id == 3 %>
+  <div><%= form.label "Sound_hole"%></div>
+  <%= form.text_field :sound_hole%>
+<% end %>
+
+<div><%= form.label "Description"%></div>
+  <%= form.text_area :description%>
+  <%= form.hidden_field :user_id, :value => current_user.id %>
