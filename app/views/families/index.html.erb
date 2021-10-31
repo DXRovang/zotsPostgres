@@ -4,17 +4,17 @@
 <div class="banjo">
 <img src="banjo.jpg" alt="Banjo" max-width="600" height="400"><br>
      <button><%= link_to "Search Banjos", family_categories_path(1) %></button>
-     <%= button_to "Add a Banjo", new_user_instrument_path(current_user), method: :get, params: {'family[id]' => 1} %><br>
+     <%= button_to "Add a Banjo", new_family_instrument_path(current_user), method: :get, params: {'family[id]' => 1} %><br>
 </div>
 
 <div class="guitar">
 <img src="guitar.jpg" alt="Guitar" max-width="600" height="500"><br>
      <button><%= link_to "Search Guitars", family_categories_path(2) %></button>
-     <%= button_to "Add a Guitar", new_user_instrument_path(current_user), method: :get, params: {'family[id]' => 2} %><br>
+     <%= button_to "Add a Guitar", new_family_instrument_path(current_user), method: :get, params: {'family[id]' => 2} %><br>
 </div>
 
 <div class="mando">
 <img src="mando.jpg" alt="Mando" max-width="600" height="400"><br>
      <button><%= link_to "Search Mandolins", family_categories_path(3) %></button>
-     <%= button_to "Add a Mandolin", new_user_instrument_path(current_user), method: :get, params: {'family[id]' => 3} %>
+     <%= button_to "Add a Mandolin", new_family_instrument_path(current_user), method: :get, params: {'family[id]' => 3} %>
 </div>

@@ -1,0 +1,28 @@
+<div class="page">
+<div class="show"><h1>Find a <%= @family.name %>!</h1></div>
+
+<%= form_tag family_categories_path(@family), method: :get do %>
+<%= label_tag "Category:" %>
+<% if @family.id == 1 %>
+  <%= collection_select :category, :category_id, banjo_categories, :id, :name %>
+<% elsif @family.id == 2 %>
+  <%= collection_select :category, :category_id, guitar_categories, :id, :name %>
+<% elsif @family.id == 3 %>
+  <%= collection_select :category, :category_id, mandolin_categories, :id, :name %>
+<%end%>
+
+<%= submit_tag "Search" %>
+<% end %>
+</div>
+
+<% @instruments.find do |i| %>
+<h3><%= i.category.name %>s for sale:</h3>
+<% end %> 
+ 
+<% @instruments.each do |instrument|%>
+  <div class="search">
+  <li><%= instrument.year %> <%= link_to instrument.maker.name, instrument_path(instrument) %> 
+  (seller: <%= link_to instrument.user.username, user_path(instrument.user_id) %>)
+  </li>
+  </div>
+<% end %>
