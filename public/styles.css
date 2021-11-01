@@ -3,14 +3,17 @@ body{
   /* background-color: rgba(255, 174, 0, 0.742); */
 }
 .navpic{
-  background-image: url("desktop.jpg");
+  background-image: url("desktop2.jpg");
 
 }
 
 .title{
   text-align: center;
+ 
 }
-
+h1{
+  color: antiquewhite;
+}
 .home-card{
   background-color: antiquewhite;
 }
@@ -28,4 +31,8 @@ body{
 
 .center{
   margin: auto;
+}
+
+.margin{
+  margin: 10px;
 }

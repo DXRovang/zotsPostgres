@@ -1,6 +1,7 @@
 
 <h1 class="title">Welcome to Old Timey Strings!</h1>
-
+<div class="row">
+  <div class="col-sm-10 mx-auto">
 <div class="card-group">
   <div class="card">
     <img src="banjo.jpg" alt="Banjo"  class="card-img-top img-fluid" >
@@ -28,12 +29,14 @@
     <img src="mando.jpg" alt="Mandolin"  class="card-img-top img-fluid" >
     <div class="card-body home-card">
       <h5 class="card-title">Mandolins</h5>
-      <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
     </div>
     <div class="card-footer">
           <button class="text"><%= link_to "Search Mandolins", family_categories_path(3) %></button>
      <%= button_to "Add a Mandolin", new_family_instrument_path(current_user), method: :get, params: {'family[id]' => 3} %>
     </div>
+  </div>
+</div>
   </div>
 </div>
 
