@@ -1,20 +1,17 @@
 <div class="show title"><h1>All Instruments</h1></div>
- <div class="row row-cols-1 row-cols-md-3 g-4">
-<% @instruments.order(:category_id).each do |i| %>
-  <% category = Category.find_by(id: i.category_id) %>
-
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% @instruments.order(:category_id).each do |i| %>
+    <% category = Category.find_by(id: i.category_id) %>
     <% if i.for_sale == true %>
-    
       <div class="col">
-      <div class="card">
-        <div class="card-body">
-              <li class="card-text">(<%= i.year %>) <%= link_to category.name, instrument_path(i) %> by <%= i.maker.name %></li> 
+        <div class="card">
+          <div class="card-body">
+            <li class="card-text">(<%= i.year %>) <%= link_to category.name, instrument_path(i) %> by <%= i.maker.name %></li> 
+          </div>
         </div>
       </div>
-        </div>
     <% end %>
-  
-<% end %>
+  <% end %>
 </div>
 
  

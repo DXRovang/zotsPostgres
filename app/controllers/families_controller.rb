@@ -8,5 +8,5 @@ class FamiliesController < ApplicationController
   def show
     #currently unused
     @family = Family.find_by(id: params[:id])
-  end
+  end 
 end

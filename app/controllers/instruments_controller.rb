@@ -7,8 +7,9 @@ class InstrumentsController < ApplicationController
     end
    
     def new 
+      binding.pry
       @instrument = Instrument.new 
-      @family = Family.find_by(id: params[:family_id])
+      @family = Family.find_by(id: params[:family][:id]) 
     end
   
     def create
