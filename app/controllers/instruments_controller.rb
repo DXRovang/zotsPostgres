@@ -7,7 +7,7 @@ class InstrumentsController < ApplicationController
     end
    
     def new 
-      binding.pry
+      # binding.pry
       @instrument = Instrument.new 
       @family = Family.find_by(id: params[:family][:id]) 
     end
@@ -29,15 +29,17 @@ class InstrumentsController < ApplicationController
   
     def edit
       # set_instrument
+      # binding.pry
       if @instrument.user_id != current_user.id
         redirect_to instruments_path
       else
         if (1..4).to_a.include?(@instrument.category_id.to_i)
           @family = Family.find_by(id: 1)
-        elsif (8..15).to_a.include?(@instrument.category_id.to_i)
+        elsif (4..13).to_a.include?(@instrument.category_id.to_i)
           @family = Family.find_by(id: 2)
-        elsif (5..7).to_a.include?(@instrument.category_id.to_i)
+        elsif (13..16).to_a.include?(@instrument.category_id.to_i)
           @family = Family.find_by(id: 3)
+          
         end
       end
     end
@@ -71,7 +73,7 @@ class InstrumentsController < ApplicationController
         :frets, 
         :color, 
         :material, 
-        :sound_hole, 
+        :hole, 
         :body, 
         :neck, 
         :back, 

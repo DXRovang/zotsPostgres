@@ -20,3 +20,7 @@ body{
   border-color: black;
   
 }
+
+.center{
+  margin: auto;
+}

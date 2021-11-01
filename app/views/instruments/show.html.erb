@@ -1,75 +1,106 @@
-<br>
-<div class="inst_show">
-<% if @instrument.for_sale == true %>
-  <h1>For Sale!</h1>
-<% else %>
-  <h1>Currently Not For Sale</h1>
-<% end %>
+<div class="card mx-auto" style="width: 18rem;">
 
-<div>Category: <%= @instrument.category.name %></div>
-<div>Maker: <%= @instrument.maker.name %></div>
-<div>Year: <%= @instrument.year %></div>
+  <div class="card-body">
+
+    
+
+
+
+<% if @instrument.for_sale == true %>
+<h5 class="card-title text-center">For Sale!</h5>
+<% else %>
+<h5 class="card-title text-center">Currently Not For Sale</h5>
+<% end %>
+  <%
+=begin%>
+ <img src="..." class="card-img-top" alt="..."> 
+<%
+=end%>
+  
+  <% if @instrument.description != "" && @instrument.description != nil %>
+<p class="card-text">Description:
+<%= @instrument.description %></p>
+<% end %>
+ </div> 
+  
+  <ul class="list-group list-group-flush">
+
+  
+
+
+<li class="list-group-item">Category: <%= @instrument.category.name %></li>
+<li class="list-group-item">Maker: <%= @instrument.maker.name %></li>
+<li class="list-group-item">Year: <%= @instrument.year %></li>
 
 <% if @instrument.color != "" && @instrument.color != nil %>
-<div>Color:
-<%= @instrument.color %></div>
+<li class="list-group-item">Color:
+<%= @instrument.color %></li>
 <% end %>
 
 <% if @instrument.material != "" && @instrument.material != nil %>
-<div>Material:
-<%= @instrument.material %></div>
+<li class="list-group-item">Material:
+<%= @instrument.material %></li>
 <% end %>
 
 <% if @instrument.frets %>
-<div>Frets:
-<%= @instrument.frets %></div>
+<li class="list-group-item">Frets:
+<%= @instrument.frets %></li>
 <% end %>
 
 <% if @instrument.back != "" && @instrument.back != nil %>
-<div>Back:
-<%= @instrument.back %></div>
+<li class="list-group-item">Back:
+<%= @instrument.back %></li>
 <% end %>
 
 <% if @instrument.body != "" && @instrument.body != nil %>
-<div>Body:
-<%= @instrument.body %></div>
+<li class="list-group-item">Body:
+<%= @instrument.body %></li>
 <% end %>
 
 <% if @instrument.neck != "" && @instrument.neck != nil %>
-<div>Neck:
-<%= @instrument.neck %></div>
+<li class="list-group-item">Neck:
+<%= @instrument.neck %></li>
 <% end %>
 
 <% if @instrument.bridge != "" && @instrument.bridge != nil %>
-<div>Bridge:
-<%= @instrument.bridge %></div>
+<li class="list-group-item">Bridge:
+<%= @instrument.bridge %></li>
 <% end %>
 
 <% if @instrument.hole != "" && @instrument.hole != nil %>
-<div>Sound Hole:
-<%= @instrument.hole %></div>
+<li class="list-group-item">Sound Hole:
+<%= @instrument.hole %></li>
 <% end %>
 
 <% if @instrument.price && @instrument.for_sale == true%>
-<div>Price: $
-<%= '%.2f' % @instrument.price %>USD</div>
+<li class="list-group-item">Price: $
+<%= '%.2f' % @instrument.price %>USD</li>
 <% end %>
 
-<% if @instrument.description != "" && @instrument.description != nil %>
-<div>Description:
-<%= @instrument.description %></div>
-<% end %>
-</div>
-
- 
-<% if session[:user_id] == @instrument.user.id %>
-<button class="edit text"><%= link_to "Edit", edit_instrument_path(@instrument.id) %></button>
-<%= button_to "Delete", @instrument, method: :delete, data: { confirm: "Really?" } %>
-<% end %><br><br> 
-
+</ul>
+  <%
+=begin%>
+ <div class="card-body">
+    <a href="#" class="card-link">Username:</a>
+    <a href="#" class="card-link">Email:</a>
+  </div> 
+<%
+=end%>
 
 <div>Username:
 <%= link_to @instrument.user.username, user_path(@instrument.user) %></div>
 
 <div>Email:
 <%= @instrument.user.email %></div>
+
+</div>
+
+ 
+<% if session[:user_id] == @instrument.user.id %>
+
+<button class="text"style="text_decoration: none;"><%= link_to "Edit", edit_instrument_path(@instrument.id) %></button>
+<%= button_to "Delete", @instrument, method: :delete, data: { confirm: "Really?" } %>
+<% end %><br><br> 
+
+
+
