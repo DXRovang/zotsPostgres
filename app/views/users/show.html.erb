@@ -1,7 +1,7 @@
 <div class="title show"><h1><%= @user.username %>'s Page</h1>
 <%= @user.email %><br><br></div>
 <% if @user.id == session[:user_id] %>
-<button style="text_decoration: none;"><%= link_to "Edit My Info", edit_user_path(@user) %></button>
+<button class="text"style="text_decoration: none;"><%= link_to "Edit My Info", edit_user_path(@user) %></button>
 <%= button_to "Delete My Account", user_path(@user), method: :delete, data: { confirm: "Are You Sure?" } %>
 
 <% end %>

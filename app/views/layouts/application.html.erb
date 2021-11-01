@@ -35,43 +35,6 @@
       </div>
     </nav>
 
-    <%
-=begin%>
- <div class="nav">
-    <ul> 
-<%
-=end%>
-      <%
-=begin%>
- <li><button><%= link_to "Home", families_path %></button></li> 
-<%
-=end%>
-      <%
-=begin%>
- <li><button><%= link_to "Makers", makers_path %></button></li> 
-<%
-=end%>
-      <%
-=begin%>
- <li><button><%= link_to "My Instruments", user_path(session[:user_id]) %></button></li> 
-<%
-=end%>
-      <%
-=begin%>
- <li><button><%= link_to "Everything", instruments_path %></button></li> 
-<%
-=end%>
-      <%
-=begin%>
- <li><%= button_to "Logout", logout_path, method: :post %></li> 
-<%
-=end%>
-    <%
-=begin%>
- </ul>
-    </div> 
-<%
-=end%>
       <br>
     <% end %>
 

@@ -60,15 +60,13 @@
 <%= @instrument.description %></div>
 <% end %>
 </div>
-<%
-=begin%>
+
  
 <% if session[:user_id] == @instrument.user.id %>
-<button class="edit"><%= link_to "Edit", edit_instrument_path(@instrument.id) %></button>
+<button class="edit text"><%= link_to "Edit", edit_instrument_path(@instrument.id) %></button>
 <%= button_to "Delete", @instrument, method: :delete, data: { confirm: "Really?" } %>
 <% end %><br><br> 
-<%
-=end%>
+
 
 <div>Username:
 <%= link_to @instrument.user.username, user_path(@instrument.user) %></div>

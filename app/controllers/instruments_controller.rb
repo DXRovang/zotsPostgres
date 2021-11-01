@@ -5,7 +5,7 @@ class InstrumentsController < ApplicationController
     def index
       @instruments = Instrument.all
     end
-  
+   
     def new 
       @instrument = Instrument.new 
       @family = Family.find_by(id: params[:family_id])
