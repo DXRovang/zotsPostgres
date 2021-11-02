@@ -27,11 +27,11 @@ gem 'pry'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'devise'
+# gem 'devise'
 
 gem 'omniauth'
 gem 'dotenv-rails'
-gem 'omniauth-google'
+# gem 'omniauth-google'
 gem 'omniauth-facebook'
 
 group :development, :test do
