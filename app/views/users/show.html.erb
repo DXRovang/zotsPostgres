@@ -10,7 +10,7 @@
 <ul class="list-group list-group-flush">
   <% @user.instruments.order(:category_id).each do |instrument| %>
     <% if instrument.for_sale == true %>
-      <li class="list-group-item"><%= link_to instrument.category.name, instrument_path(instrument) %>(<%= instrument.year %>) - 
+      <li class="list-group-item text"><%= link_to instrument.category.name, instrument_path(instrument) %>(<%= instrument.year %>) - 
       <%= instrument.maker.name %></li>
     <% end %>
   <% end %>
@@ -25,7 +25,7 @@
 <ul class="list-group list-group-flush">
   <% @user.instruments.order(:category_id).each do |instrument| %>
     <% if instrument.for_sale == false %>
-      <li class="list-group-item"><%= link_to instrument.category.name, instrument_path(instrument) %>(<%= instrument.year %>) - 
+      <li class="list-group-item text"><%= link_to instrument.category.name, instrument_path(instrument) %>(<%= instrument.year %>) - 
       <%= instrument.maker.name %></li>
     <% end %>
   <% end %>

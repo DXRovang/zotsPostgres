@@ -12,7 +12,7 @@
   </div>
 <% end %>
 
-<div><%= form.label "Type"%></div>
+<h3><%= form.label "Type"%></h3>
 <% if family.id == 1 %>
   <%= form.collection_select :category_id, banjo_categories, :id, :name %>
   <%= form.hidden_field :family_id, :value => 1 %>
@@ -24,7 +24,7 @@
   <%= form.hidden_field :family_id, :value => 3 %>
 <% end %>
 
-<div><%= form.label "Maker" %></div>
+<h3><%= form.label "Maker" %></h3>
 <%= form.text_field :maker_name, list: "makers_autocomplete" %>
 <datalist id="makers_autocomplete">
 <% Maker.all.each do |maker| %>
@@ -32,30 +32,30 @@
 <% end %>
 </datalist> 
 
-<div><%= form.label "Price"%></div>  
+<h3><%= form.label "Price"%></h3>  
 <%= form.number_field :price%>
-<div><%= form.label "Year"%></div>
+<h3><%= form.label "Year"%></h3>
 <%= form.number_field :year%>
-<div><%= form.label "Color"%></div>
+<h3><%= form.label "Color"%></h3>
 <%= form.text_field :color%>
-<div><%= form.label "Material"%></div>
+<h3><%= form.label "Material"%></h3>
 <%= form.text_field :material%>
-<div><%= form.label "Frets"%></div>
+<h3><%= form.label "Frets"%></h3>
 <%= form.number_field :frets%>
 
 <% if family.id == 1 %>
-  <div><%= form.label "Back"%></div>
+  <h3><%= form.label "Back"%></h3>
   <%= form.text_field :back%>
 <% elsif family.id == 2 %>
-  <div><%= form.label "Bridge"%></div>
+  <h3><%= form.label "Bridge"%></h3>
   <%= form.text_field :bridge%>
-  <div><%= form.label "Neck"%></div>
+  <h3><%= form.label "Neck"%></h3>
   <%= form.text_field :neck%>
 <% elsif family.id == 3 %>
-  <div><%= form.label "Sound_hole"%></div>
+  <h3><%= form.label "Sound_hole"%></h3>
   <%= form.text_field :hole%>
 <% end %>
 
-<div><%= form.label "Description"%></div>
+<h3><%= form.label "Description"%></h3>
   <%= form.text_area :description%>
   <%= form.hidden_field :user_id, :value => current_user.id %>

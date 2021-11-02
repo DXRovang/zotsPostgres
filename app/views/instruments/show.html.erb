@@ -78,21 +78,12 @@
 <% end %>
 
 </ul>
-  <%
-=begin%>
- <div class="card-body">
-    <a href="#" class="card-link">Username:</a>
-    <a href="#" class="card-link">Email:</a>
-  </div> 
-<%
-=end%>
-
-<div>Username:
-<%= link_to @instrument.user.username, user_path(@instrument.user) %></div>
-
-<div>Email:
-<%= @instrument.user.email %></div>
-
+<div class="title space">
+  <div>Username:
+    <%= link_to @instrument.user.username, user_path(@instrument.user) %></div>
+  <div>Email:
+    <%= @instrument.user.email %></div>
+</div>
 </div>
 
  

@@ -1,3 +1,5 @@
+<h1 class="title">Welcome to Old Timey Strings!</h1>
+
 <div class="login">
 <h1>Login</h1>
 
@@ -6,12 +8,13 @@
 <% end %>
 
 <%= form_for :user do |f| %>
-<%= f.label "Username" %>
+<h3><%= f.label "Username" %></h3>
 <%= f.text_field :username %>
-<%= f.label "Password" %>
+<h3><%= f.label "Password" %></h3>
 <%= f.password_field :password%>
 <%= f.submit "Log In" %>
 <% end %>
 </div>
-<p>If you're new to Old Time Strings, sign up here!</p>
-<%= button_to "Signup", signup_path, method: :get%>
+<div class="lower-left foot-color">
+<h4>If you're new to Old Time Strings, sign up here!</h4>
+<%= button_to "Signup", signup_path, method: :get%></div>
