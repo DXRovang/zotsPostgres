@@ -79,10 +79,11 @@
 
 </ul>
 <div class="title space">
-  <div>Username:
+  <div>Seller:
     <%= link_to @instrument.user.username, user_path(@instrument.user) %></div>
-  <div>Email:
-    <%= @instrument.user.email %></div>
+  <div>
+    <a href="mailto:<%= @instrument.user.email %>"><h4 class="text">Email</h4></a>
+  </div>
 </div>
 </div>
 

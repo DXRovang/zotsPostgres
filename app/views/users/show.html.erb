@@ -1,5 +1,8 @@
-<div class="title show"><h1><%= @user.username %>'s Page</h1>
-<h6><%= @user.email %></h6><br></div>
+<div class="title show">
+  <h1><%= @user.username %>'s Page</h1>
+  <a href="mailto:<%= @user.email %>"><h6 class="text">Email</h6></a>
+  <br>
+</div>
 
 
 <div class="card text-center mx-auto" style="width: 18rem;">
