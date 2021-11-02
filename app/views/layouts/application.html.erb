@@ -25,7 +25,7 @@
               <button class="nav-link text"><%= link_to "Everything", instruments_path %></button>
             </li>
             <li class="nav-item">
-              <button class="nav-link text"><%= link_to "My Instruments", user_path(session[:user_id]) %></button>
+              <button class="nav-link text"><%= link_to "My Instruments", user_path(session[:user_id]), :class=>"dk" %></button>
             </li>
             <li class="nav-item" class="nav-link">
               <%= button_to "Logout", logout_path, method: :post %>

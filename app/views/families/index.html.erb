@@ -10,8 +10,8 @@
       <p class="card-text"></p>
     </div>
     <div class="card-footer">    
-      <button class="text"><%= link_to "Search Banjos", family_categories_path(1) %></button>
-     <%= button_to "Add a Banjo", new_family_instrument_path(current_user), method: :get, params: {'family[id]' => 1} %>
+      <button class="text"><%= link_to "Search", family_categories_path(1) %></button>
+     <%= button_to "Add", new_family_instrument_path(current_user), method: :get, params: {'family[id]' => 1} %>
     </div>
   </div>
   <div class="card">
@@ -21,8 +21,8 @@
       <p class="card-text"></p>
     </div>
     <div class="card-footer">
-           <button class="text"><%= link_to "Search Guitars", family_categories_path(2) %></button>
-     <%= button_to "Add a Guitar", new_family_instrument_path(current_user), method: :get, params: {'family[id]' => 2} %>
+           <button class="text"><%= link_to "Search", family_categories_path(2) %></button>
+     <%= button_to "Add", new_family_instrument_path(current_user), method: :get, params: {'family[id]' => 2} %>
     </div>
   </div>
   <div class="card">
@@ -32,8 +32,8 @@
       <p class="card-text "></p>
     </div>
     <div class="card-footer">
-          <button class="text"><%= link_to "Search Mandolins", family_categories_path(3) %></button>
-     <%= button_to "Add a Mandolin", new_family_instrument_path(current_user), method: :get, params: {'family[id]' => 3} %>
+          <button class="text"><%= link_to "Search", family_categories_path(3) %></button>
+     <%= button_to "Add", new_family_instrument_path(current_user), method: :get, params: {'family[id]' => 3} %>
     </div>
   </div>
 </div>
