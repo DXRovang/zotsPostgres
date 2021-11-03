@@ -86,10 +86,10 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: alexanderrovang
+  # database: alexanderrovang
   username: alexanderrovang
   password: <%= ENV['POSTGRES_TEST_DATABASE_PASSWORD'] %>
 
-  # database: zots_production
+  database: zots_production
   # username: zots
   # password: <%= ENV['ZOTS_TEST_DATABASE_PASSWORD'] %>
