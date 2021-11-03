@@ -17,16 +17,16 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # host: localhost
-  # port: 5433
+  host: localhost
+  port: 5433
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: zots_development
-  # database: alexanderrovang
+  # database: zots_development
+  database: alexanderrovang
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -60,8 +60,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: zots_test
-  # database: alexanderrovang
+  # database: zots_test
+  database: alexanderrovang
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -85,11 +85,11 @@ test:
 #
 production:
   <<: *default
-  # url: <%= ENV['DATABASE_URL'] %>
-  # database: alexanderrovang
-  # username: alexanderrovang
-  # password: <%= ENV['POSTGRES_TEST_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  database: alexanderrovang
+  username: alexanderrovang
+  password: <%= ENV['POSTGRES_TEST_DATABASE_PASSWORD'] %>
 
-  database: zots_production
-  username: zots
-  password: <%= ENV['ZOTS_TEST_DATABASE_PASSWORD'] %>
+  # database: zots_production
+  # username: zots
+  # password: <%= ENV['ZOTS_TEST_DATABASE_PASSWORD'] %>
