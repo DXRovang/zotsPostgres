@@ -1,4 +1,8 @@
-<div class="page">
+Hello, world
+
+<%
+=begin%>
+ <div class="page">
 <div class="show"><h1>Find a <%= @family.name %>!</h1></div>
 
 <%= form_tag family_categories_path(@family), method: :get do %>
@@ -24,4 +28,6 @@
   (seller: <%= link_to instrument.user.username, user_path(instrument.user_id) %>)
   </li>
   </div>
-<% end %>
+<% end %> 
+<%
+=end%>
