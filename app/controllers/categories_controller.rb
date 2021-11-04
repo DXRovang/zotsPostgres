@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_action(:require_login)
   
   def index 
-    byebug
+    # byebug
     #from the nested route in the families index view
     if params[:family_id] 
       @family = Family.find_by(id: params[:family_id])
