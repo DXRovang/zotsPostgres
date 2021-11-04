@@ -1,15 +1,5 @@
-# README
+# OLD TIMEY STRINGS
 
-* bundle install
-
-* rails db:create
-
-* rails db:migrate
-
-* rails db:seed
-
-* rails s
-
-* navigate to /families
+This application was created with Ruby on Rails, ERB, PostgreSQL, custom Bootstrap, and CSS.
 
 
