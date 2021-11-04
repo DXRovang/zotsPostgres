@@ -10,7 +10,13 @@
       <p class="card-text"></p>
     </div>
     <div class="card-footer">    
-      <button class="text"><%= link_to "Search", family_categories_path(@category, family_id: 1) %></button>
+      <%
+=begin%>
+ <button class="text"><%= link_to "Search", family_categories_path(1) %></button> 
+<%
+=end%>
+      <button class="text"><%= link_to "Search", "/families/1/categories" %></button>
+
      <%= button_to "Add", new_family_instrument_path(current_user), method: :get, params: {'family[id]' => 1} %>
     </div>
   </div>
