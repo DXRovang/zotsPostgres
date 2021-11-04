@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+class CategoriesController < ApplicationController 
   before_action(:require_login)
   
   def index 

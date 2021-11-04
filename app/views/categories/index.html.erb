@@ -1,5 +1,9 @@
 <div class="page">
-<div class="show"><h1>Find a <%= @family.name %>!</h1></div>
+<%
+=begin%>
+ <div class="show"><h1>Find a <%= @family.name %>!</h1></div> 
+<%
+=end%>
 
 <%= form_tag family_categories_path(@family), method: :get do %>
 <% if @family.id == 1 %>
