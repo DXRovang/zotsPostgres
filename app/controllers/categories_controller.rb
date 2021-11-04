@@ -4,8 +4,8 @@ class CategoriesController < ApplicationController
   def index 
     # byebug
     #from the nested route in the families index view
-    if params[:family_id] 
-      @family = Family.find_by(id: params[:family_id])
+    if params[:id] 
+      @family = Family.find_by(id: params[:id])
       #the search page, checks for the presence of a category selection
       if params[:category]
         @instruments = Instrument.category_search(params[:category][:category_id])
@@ -25,6 +25,6 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(:name, :category_id)
+    params.require(:category).permit(:name, :category_id, :id)
   end
 end
