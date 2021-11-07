@@ -102,3 +102,8 @@ h6{
 .float-left{
   float:left;
 }
+
+.cardsize{
+  width: 50vw;
+  float: right;
+}
