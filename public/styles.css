@@ -99,3 +99,6 @@ h6{
 .tx-size{
   font-size: larger;
 }
+.float-left{
+  float:left;
+}

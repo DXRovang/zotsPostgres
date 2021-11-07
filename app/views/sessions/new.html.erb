@@ -1,6 +1,6 @@
 <h1 class="title">Welcome to Old Timey Strings!</h1>
 
-<div class="login">
+<div class="login float-left">
 <h1>Login</h1>
 
 <% @errors && @errors.each do |e| %>
@@ -16,5 +16,10 @@
 <% end %>
 </div>
 <div class="lower-left foot-color">
+
+  <div class="card">
+    <img src="Coverpic.jpg" alt="Historical Photograph"  class="card-img-top img-fluid" >
+  </div>
+
 <h4>If you're new to Old Time Strings, sign up here!</h4>
 <%= button_to "Signup", signup_path, method: :get%></div>
