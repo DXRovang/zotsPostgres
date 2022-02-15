@@ -11,11 +11,10 @@
 <% else %>
 <h5 class="card-title text-center">Currently Not For Sale</h5>
 <% end %>
-  <%
-=begin%>
- <img src="..." class="card-img-top" alt="..."> 
-<%
-=end%>
+
+<% if @instrument.image.attached? %>
+<%= image_tag @instrument.image.variant(resize: "500x500") %>
+<% end %>
   
   <% if @instrument.description != "" && @instrument.description != nil %>
 <p class="card-text">Description:

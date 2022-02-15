@@ -84,6 +84,7 @@ class InstrumentsController < ApplicationController
         :family_id,
         :user_id,
         :maker_name,
+        :image
       )
     end
   end

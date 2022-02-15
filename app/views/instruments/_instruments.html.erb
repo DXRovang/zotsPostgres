@@ -56,6 +56,9 @@
   <%= form.text_field :hole%>
 <% end %>
 
+<h3><%= form.label "Image"%></h3>
+<%= form.file_field :image%>
+
 <h3><%= form.label "Description"%></h3>
   <%= form.text_area :description%>
   <%= form.hidden_field :user_id, :value => current_user.id %>
