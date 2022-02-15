@@ -13,7 +13,7 @@
 <% end %>
 
 <% if @instrument.image.attached? %>
-<%= image_tag @instrument.image.variant(resize: "500x500") %>
+<%= image_tag @instrument.image.variant(resize: "300x300") %>
 <% end %>
   
   <% if @instrument.description != "" && @instrument.description != nil %>
