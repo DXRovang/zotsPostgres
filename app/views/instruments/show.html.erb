@@ -13,11 +13,6 @@
 <% end %>
 
 <% if @instrument.image.attached? %>
-<%
-=begin%>
- <%= image_tag @instrument.image.variant(resize: "500x500") %> 
-<%
-=end%>
 <%= image_tag @instrument.image, style: "width: 250px; display: block" %>
 <% end %>
   
