@@ -2,10 +2,6 @@
 
   <div class="card-body">
 
-    
-
-
-
 <% if @instrument.for_sale == true %>
 <h4 class="card-title text-center">For Sale!</h4>
 <% else %>
@@ -13,7 +9,7 @@
 <% end %>
 
 <% if @instrument.image.attached? %>
-<%= image_tag @instrument.image, style: "width: 250px; display: block" %>
+<%= image_tag @instrument.representation, style: "width: 250px; display: block" %>
 <% end %>
   
   <% if @instrument.description != "" && @instrument.description != nil %>
