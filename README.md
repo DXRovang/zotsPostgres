@@ -10,10 +10,10 @@ This application was created with Ruby on Rails, ERB, PostgreSQL, custom Bootstr
 
 We are currently in the process of deploying this application, but in the meantime feel free to run locally!
 
-##rails db:create
-##rails db:seed
-##bin/rails db:migrate RAILS_ENV=development
-##http://127.0.0.1:3000/login
+*rails db:create
+*rails db:seed
+*bin/rails db:migrate RAILS_ENV=development
+*http://127.0.0.1:3000/login
 
 Happy shopping.    :)
 
