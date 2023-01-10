@@ -8,6 +8,14 @@ Once you've created an account, you'll be able to search the database for instru
 
 This application was created with Ruby on Rails, ERB, PostgreSQL, custom Bootstrap, and CSS.
 
-We are currently in the process of deploying this application, so thanks for your patience!
+We are currently in the process of deploying this application, but in the meantime feel free to run locally!
+
+rails db:create
+rails db:seed
+bin/rails db:migrate RAILS_ENV=development
+http://127.0.0.1:3000/login
 
 Happy shopping.    :)
+
+
+
